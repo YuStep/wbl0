@@ -1,0 +1,17 @@
+.order-wrap{
+    border: deeppink solid 1px;
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    margin: 10px auto auto;
+    max-width: 300px;
+}
+.order-header{
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    flex-flow:column;
+}
+.order-p{
+    padding: 5px;
+}

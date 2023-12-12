@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправка заказа по ID</title>
+</head>
+<body>
+<ul>
+    {{ range .orderList.Data }}
+    <li>
+        <p>Order Info:</p>
+        <ul>
+            <li>
+                <p>OrderUID: {{ .OrderUID }}</p>
+                <p>TrackNumber: {{ .TrackNumber }}</p>
+                <p>Entry: {{ .Entry }}</p>
+            </li>
+
+            <!-- Добавьте остальные поля из Order по аналогии -->
+        </ul>
+        <p>Delivery Info:</p>
+        <ul>
+            <li>
+                <p>Name: {{ .Delivery.Name }}</p>
+                <p>Phone: {{ .Delivery.Phone }}</p>
+            </li>
+
+            <!-- Добавьте остальные поля из Delivery по аналогии -->
+        </ul>
+        <p>Payment Info:</p>
+        <ul>
+            <li>
+            <p>Transaction: {{ .Payment.Transaction }}</p>
+            <p>RequestId: {{ .Payment.RequestId }}</p>
+             <!-- Добавьте остальные поля из Payment по аналогии -->
+            </li>
+        </ul>
+        <p>Items:</p>
+        <ul>
+            {{ range .Items }}
+            <li>
+                <ul>
+                    <li>
+                    <p>ChrtIDr: {{ .ChrtID }}</p>
+                    <p>TrackNumber: {{ .TrackNumber }}</p>
+                    <p>Price: {{ .TrackNumber }}</p>
+                    <p>Rid: {{ .TrackNumber }}</p>
+                    <p>Name: {{ .TrackNumber }}</p>
+                    <p>Sale: {{ .TrackNumber }}</p>
+                    <p>Size: {{ .TrackNumber }}</p>
+                    <p>TotalPrice: {{ .TrackNumber }}</p>
+                    <p>NmId: {{ .TrackNumber }}</p>
+                    <p>Brand: {{ .TrackNumber }}</p>
+                    <p>Status: {{ .Status }}</p>
+                    </li>
+                    <!-- Добавьте остальные поля из Item по аналогии -->
+                </ul>
+            </li>
+            {{ end }}
+        </ul>
+    </li>
+    {{ end }}
+</ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.App {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    '. content .'
+    'footer footer footer';
+
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.App > header {
+  background-color: #ffb30f;
+  color: #000000;
+  display: flex;
+  grid-area: header;
+  justify-content: center;
+}
+
+.App > aside {
+  background-color: #554971;
+  grid-area: side;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.App > main {
+  background-color: #f9f7f3;
+  grid-area: content;
+  padding: 1rem;
+}
+
+.App > footer {
+  background-color: #2d080a;
+  color: #fff;
+  grid-area: footer;
+  text-align: center;
+}

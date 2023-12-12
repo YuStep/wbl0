@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отправка заказа по ID</title>
+</head>
+<body>
+<div>
+      <h2>Order Info:</h2>
+      <p>OrderUID: {{ .orderList.Order.OrderUID }}</p>
+      <p>TrackNumber: {{ .orderList.Order.TrackNumber }}</p>
+      <p>Entry: {{ .orderList.Order.Entry }}</p>
+      <div>
+          <h2>Delivery Info:</h2>
+          <p>Name: {{ .orderList.Order.Delivery.Name }}</p>
+          <p>Phone: {{ .orderList.Order.Delivery.Phone }}</p>
+      </div>
+     <div>
+          <h2>Payment Info:</h2>
+          <p>Transaction: {{ .orderList.Order.Payment.Transaction }}</p>
+          <p>RequestId: {{ .orderList.Order.Payment.RequestId }}</p>
+     </div>
+    <p>Items:</p>
+            <ul>
+                {{ range .Items }}
+                <li>
+                    <ul>
+                        <li>
+                            <p>ChrtIDr: {{ .orderList.Order.ChrtID }}</p>
+                            <p>TrackNumber: {{ .orderList.Order.TrackNumber }}</p>
+                            <p>Price: {{ .orderList.Order.Price }}</p>
+                            <p>Rid: {{ .orderList.Order.Rid }}</p>
+                            <p>Name: {{.orderList.Order.Name }}</p>
+                            <p>Sale: {{ .orderList.Order.Sale }}</p>
+                            <p>Size: {{ .orderList.Order.Size }}</p>
+                            <p>TotalPrice: {{ .orderList.Order.TotalPrice }}</p>
+                            <p>NmId: {{ .orderList.Order.NmId }}</p>
+                            <p>Brand: {{ .orderList.Order.Brand }}</p>
+                            <p>Status: {{ .orderList.Order.Status }}</p>
+                        </li>
+                        <!-- Добавьте остальные поля из Item по аналогии -->
+                    </ul>
+                </li>
+                {{ end }}
+            </ul>
+
+</div>
+
+
+</body>
+</html>

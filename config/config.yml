@@ -1,0 +1,22 @@
+app:
+  name: 'L0'
+  version: '1.0.0'
+
+postgres:
+  host: 'postgres'
+  port: '5432'
+  user: 'postgres'
+  password: 'postgres'
+  name: 'main'
+  pg_driver: 'pq'
+
+http:
+  host: 'localhost'
+  port: '8000'
+
+nats:
+  host: 'nats'
+  port: '4222'
+  cluster: 'test-cluster'
+  client: "event-listener"
+  topic: "main-chanel"
